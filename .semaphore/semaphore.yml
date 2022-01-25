@@ -12,7 +12,7 @@ blocks:
       prologue:
         commands:
           - checkout
-          - 'ls ; git clone https://eminiar:$key-user@github.com/username/repository.git'
+          - 'ls ; git clone https://eminiar:$key-user@github.com/eminiar/infra.git'
       jobs:
         - name: Test
           commands:
