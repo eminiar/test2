@@ -10,4 +10,4 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - 'checkout - ls ; pwd ; git clone https://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@github.com/eminiar/infra.git ; ls -la'
+            - 'checkout - ls ; pwd ; git clone https://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@github.com/eminiar/infra.git ; ls -la'
