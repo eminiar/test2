@@ -5,23 +5,17 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: 'Block #1'
+  - name: Test
     task:
+      secrets:
+        - name: key-pri
+      prologue:
+        commands:
+          - checkout
+          - chmod 0600 ~/.ssh/id_rsa
+          - ssh-add ~/.ssh/id_rsa
+          - 'ls ; git clone git@github.com:eminiar/infra.git'
       jobs:
-        - name: 'Job #1'
+        - name: Test
           commands:
-            - checkout
-            - ls
-        - name: 'Job #2'
-          commands:
-            - checkout
-            - ls
-        - name: 'Job #3'
-          commands:
-            - checkout
-            - ls
-  - name: 'Block #2'
-    task:
-      jobs:
-        - name: 'Job #1'
-          commands: []
+            - ls ; pwd
