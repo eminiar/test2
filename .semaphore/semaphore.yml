@@ -7,13 +7,7 @@ agent:
 blocks:
   - name: Test
     task:
-      secrets:
-        - name: key-user
-      prologue:
-        commands:
-          - checkout
-          - 'ls ; git clone https://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@github.com/eminiar/infra.git'
       jobs:
         - name: Test
           commands:
-            - ls ; pwd ; ls -la
+            - 'checkout - ls ; pwd ; git clone https://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@github.com/eminiar/infra.git ; ls -la'
