@@ -7,7 +7,10 @@ agent:
 blocks:
   - name: Test
     task:
+      prologue:
+        commands:
+          - 'git clone https://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@github.com/eminiar/infra.git'
       jobs:
         - name: Test
           commands:
-            - 'git clone https://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@github.com/eminiar/infra.git'
+            - echo "test..."
