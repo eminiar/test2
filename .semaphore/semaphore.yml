@@ -10,4 +10,4 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - 'git clone https://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@github.com/eminiar/infra.git'
+            - 'git clone https://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@github.com/eminiar/infra.git'
