@@ -7,10 +7,15 @@ agent:
 blocks:
   - name: Test
     task:
+      secrets:
+        - name: private-repo
       prologue:
         commands:
-          - 'git clone https://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@github.com/eminiar/infra.git'
+          - checkout
+          - chmod 0600 ~/.ssh/id_rsa_semaphoreci
+          - ssh-add ~/.ssh/id_rsa_semaphoreci
+          - 'git clone git@github.com:eminiar/infra.git'
       jobs:
         - name: Test
           commands:
-            - echo "test..."
+            - ls -la
